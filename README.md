@@ -6,6 +6,6 @@ various scripts that might be useful
 ### Dependencies
 ```
 pip install mechanize
-pip install -update html5lib
+pip install --upgrade html5lib
 sudo apt install lynx
 ```
