@@ -18,17 +18,17 @@ def parse_html(html_file,outfile):
     get_score=False
     for line in fi:
         line=line.strip()
-        print line
+ #       print line
         
         m=re.match('(\d+)$',line)
         if m:
             rank=m.group(1)
-            print rank
+#            print rank
             get_score=True
         elif get_score:
             score=line
-            print 'SCORE: ' + rank + ' ' + score
-            fo.write(rank +' ' + line + '\n')
+          #  print 'SCORE: ' + rank + ' ' + score
+            fo.write('SCORE: ' + rank +' ' + line + '\n')
             get_score=False
         if re.search('rank  p-value   N',line):
             fo.write(line + '\n')
@@ -84,7 +84,7 @@ br.form.set_all_readonly(False)
 br.form.add_file(open(filename),'text/plain',filename,name='file')
 #['file'] = str(filename)
 br.form.set_all_readonly(False)
-print br.form
+#print br.form
 
 req = br.submit()
 result_url=br.geturl()
